@@ -21,4 +21,4 @@ images_array = numpy.zeros((Img,nR,nC))
 nBytesTotal = Img*nR*nC*1 #since each pixel data is 1 byte
 images_array = numpy.asarray(struct.unpack('>'+'B'*nBytesTotal,trainImagesFile.read(nBytesTotal))).reshape((Img,nR,nC))
 print(images_array.shape)
-print(images_array(0,0,0))
+print(images_array[0])
